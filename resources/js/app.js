@@ -30,3 +30,22 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
 const app = new Vue({
     el: '#app',
 });
+
+/* Application Specific Scripts */
+
+//On shorten url button click
+$('.shorten-url-button').click(function(){
+    generateRandomFiveLetterWord();
+})
+
+function generateRandomFiveLetterWord(){
+    let r = Math.random().toString(36).substring(7);
+    return r;
+}
+
+function showElementOfClass(className){
+    className = "." + className;
+    $(className).toggle("1000");
+}
+
+
